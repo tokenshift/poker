@@ -1,6 +1,14 @@
-(defproject poker "0.1.0-SNAPSHOT"
-  :description "FIXME: write description"
-  :url "http://example.com/FIXME"
-  :license {:name "Eclipse Public License"
-            :url "http://www.eclipse.org/legal/epl-v10.html"}
-  :dependencies [[org.clojure/clojure "1.7.0"]])
+(defproject poker "0.0.1"
+  :description "Agile/scrum planning poker web app."
+  :url "http://github.com/tokenshift/poker"
+  :license {:name "The MIT License (MIT)"
+            :url "https://raw.githubusercontent.com/tokenshift/poker/master/LICENSE"}
+  :dependencies [[clj-base64 "0.0.2"]
+                 [org.clojure/clojure "1.7.0"]
+                 [ring "1.4.0"]
+                 [ring/ring-mock "0.3.0"]]
+  :plugins [[lein-ring "0.9.7"]]
+  :ring {:handler com.tokenshift.poker.main/handler
+         :auto-reload? true
+         :auto-refresh? true}
+  :main com.tokenshift.poker.main)
