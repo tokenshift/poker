@@ -28,6 +28,10 @@
 (def amazon-oauth2-client-secret (require! "AMAZON_OAUTH2_CLIENT_SECRET"))
 (def amazon-oauth2-redirect-uri (require! "AMAZON_OAUTH2_REDIRECT_URI"))
 
+(def facebook-oauth2-client-id (require! "FACEBOOK_OAUTH2_CLIENT_ID"))
+(def facebook-oauth2-client-secret (require! "FACEBOOK_OAUTH2_CLIENT_SECRET"))
+(def facebook-oauth2-redirect-uri (require! "FACEBOOK_OAUTH2_REDIRECT_URI"))
+
 (def google-oauth2-client-id (require! "GOOGLE_OAUTH2_CLIENT_ID"))
 (def google-oauth2-client-secret (require! "GOOGLE_OAUTH2_CLIENT_SECRET"))
 (def google-oauth2-redirect-uri (require! "GOOGLE_OAUTH2_REDIRECT_URI"))
