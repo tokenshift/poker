@@ -1,5 +1,6 @@
 (ns com.tokenshift.poker.config
-  "Configuration values for the Poker web app.")
+  "Configuration values for the Poker web app."
+  (:require [clojure.string :as s]))
 
 (defn require!
   "Helper function to require an environment variable be present."
@@ -22,6 +23,10 @@
 
           :else
           (throw (IllegalArgumentException. (format "$%s (\"%s\") is not an integer." var-name value))))))
+
+(def amazon-oauth2-client-id (require! "AMAZON_OAUTH2_CLIENT_ID"))
+(def amazon-oauth2-client-secret (require! "AMAZON_OAUTH2_CLIENT_SECRET"))
+(def amazon-oauth2-redirect-uri (require! "AMAZON_OAUTH2_REDIRECT_URI"))
 
 (def google-oauth2-client-id (require! "GOOGLE_OAUTH2_CLIENT_ID"))
 (def google-oauth2-client-secret (require! "GOOGLE_OAUTH2_CLIENT_SECRET"))
