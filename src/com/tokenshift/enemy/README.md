@@ -26,8 +26,8 @@ middleware stack:
 (-> app
     (wrap-strategies "auth"
       "basic"  (basic-auth-strategy "username" "password")
-      "google" (google-strategy "google-oauth2-client-app-id"
-                                "google-oauth2-client-secret")))
+      "google" (google-oauth2-strategy "google-oauth2-client-app-id"
+                                       "google-oauth2-client-secret")))
 ```
 
 To request authentication, simply redirect the user to the authorization URL for
